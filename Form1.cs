@@ -107,6 +107,9 @@ namespace KPO_LABA_3
 
         private void resetToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            foreach (var item in v)
+                item.CheckState = CheckState.Unchecked;
+
             toolStripStatusLabel1.Text = "";
             if (ven != null) { ven.Reset(); toolStripStatusLabel1.Text = "Энумератор обновлён!"; }
             else toolStripStatusLabel1.Text = "Энумератор не создан!";
@@ -149,6 +152,9 @@ namespace KPO_LABA_3
 
         private void resetToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            foreach (var item in v)
+                item.CheckState = CheckState.Unchecked;
+
             toolStripStatusLabel1.Text = "";
             if (vn != null) { vn.Reset(); toolStripStatusLabel1.Text = "Энумератор объектов обновлён!"; }
             else toolStripStatusLabel1.Text = "Энумератор объектов не создан!";
